@@ -5,12 +5,11 @@ class Budget:
     def __init__(self, balance):
         self.balance = balance
 
+    def withdraw(self, amount):
+        self.balance -= amount    
+
     def deposit(self, amount):
         self.balance += amount
-
-    def withdraw(self, amount):
-        self.balance -= amount
-
 
 # setting the balance for each category
 food = Budget(50)
@@ -22,7 +21,7 @@ pets = Budget(12)
 food.withdraw(10)
 clothing.withdraw(20)
 entertainment.withdraw(50)
-pets.withdraw(10)
+pets.withdraw(6)
 
 print("Food balance:", food.balance)
 print("Clothing balance:", clothing.balance)
